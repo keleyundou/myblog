@@ -1,7 +1,7 @@
 # sudo: false
 language: node_js
 
-# os: osx
+os: osx
 
 node_js:
   - stable # use nodejs v10 LTS
@@ -14,21 +14,14 @@ branches:
   only:
     - master # build master branch only
 
-before_script:
-  - ls
-
 script:
   - hexo generate # generate static files
 
-after_success:
-  - ls
-
 deploy:
   provider: pages
-  skip_cleanup: true
+  cleanup: false
   token: $GH_TOKEN
   keep_history: true
-  # target-branch: gh-pages
   on:
     branch: master
   local_dir: public
