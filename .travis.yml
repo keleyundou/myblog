@@ -1,25 +1,34 @@
 # sudo: false
 language: node_js
+
+os: osx
+
 node_js:
   - stable # use nodejs v10 LTS
+
 cache: 
   directories:
   - node_modules
+
 branches:
   only:
     - master # build master branch only
+
 before_script:
   - ls
+
 script:
   - hexo generate # generate static files
-after_script:
+
+after_success:
   - ls
-deploy:
-  provider: pages
-  cleanup: true
-  token: $GH_TOKEN
-  keep_history: true
-  target-branch: gh-pages
-  on:
-    branch: master
-  local_dir: public
+
+# deploy:
+#   provider: pages
+#   cleanup: true
+#   token: $GH_TOKEN
+#   keep_history: true
+#   target-branch: gh-pages
+#   on:
+#     branch: master
+#   local_dir: public
