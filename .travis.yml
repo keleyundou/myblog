@@ -18,4 +18,4 @@ deploy:
   target-branch: gh-pages
   on:
     branch: master
-  # local_dir: public
+  local_dir: public
