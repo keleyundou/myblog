@@ -8,8 +8,12 @@ cache:
 branches:
   only:
     - master # build master branch only
+before_script:
+  - ls
 script:
   - hexo generate # generate static files
+after_script:
+  - ls
 deploy:
   provider: pages
   cleanup: true
