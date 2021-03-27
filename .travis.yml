@@ -1,7 +1,7 @@
 # sudo: false
 language: node_js
 
-os: osx
+# os: osx
 
 node_js:
   - stable # use nodejs v10 LTS
@@ -23,12 +23,12 @@ script:
 after_success:
   - ls
 
-# deploy:
-#   provider: pages
-#   cleanup: true
-#   token: $GH_TOKEN
-#   keep_history: true
-#   target-branch: gh-pages
-#   on:
-#     branch: master
-#   local_dir: public
+deploy:
+  provider: pages
+  skip_cleanup: true
+  token: $GH_TOKEN
+  keep_history: true
+  # target-branch: gh-pages
+  on:
+    branch: master
+  local_dir: public
