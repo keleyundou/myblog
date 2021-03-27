@@ -99,9 +99,9 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: next
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-# deploy:
-#   type: 'git'
-#   repo: git@colabean.github.com:keleyundou/test_blog.git
-#   branch: 'gh-pages'
+Deployment
+# Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: 'git'
+  repo: https://github.com/keleyundou/myblog.git
+  branch: 'gh-pages'

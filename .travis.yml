@@ -15,7 +15,7 @@ branches:
     - master # build master branch only
 
 script:
-  - hexo generate # generate static files
+  - hexo g -d # generate static files
 
 # deploy:
 #   provider: pages
