@@ -97,11 +97,11 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-next
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: 'git'
-  repo: git@colabean.github.com:keleyundou/test_blog.git
-  branch: 'gh-pages'
+# deploy:
+#   type: 'git'
+#   repo: git@colabean.github.com:keleyundou/test_blog.git
+#   branch: 'gh-pages'
